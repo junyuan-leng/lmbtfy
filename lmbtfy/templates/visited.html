@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>让我替你百度一下</title>
+<script language="javascript" type="text/javascript">
+function redirect()
+{
+var a = "{{redirect}}"
+window.location.href=a
+}
+</script>
+<style>
+html{overflow-y:auto}
+body{font:12px arial;text-align:center;background:#fff}
+body,p,form{margin:0;padding:0;list-style:none}
+body,form,#fm{position:relative}
+
+img{border:0}
+
+#m{width:680px;margin:0 auto;}
+
+#fm{padding-left:90px;text-align:left}input{border:0;padding:0}
+
+.text_wrapper{width:418px;height:30px;display:inline-block;margin-right:5px;border:1px solid #b6b6b6;border-color:#9a9a9a #cdcdcd #cdcdcd #9a9a9a;vertical-align:top}
+.input_text{width:405px;height:22px;font:16px/22px arial;margin:5px 0 0 7px;background:#fff;outline:none;-webkit-appearance:none}
+.button_wrapper{width:97px;height:34px;display:inline-block;*position:relative;z-index:0;vertical-align:top}
+.input_button{width:95px;height:32px;padding-top:2px\9;font-size:14px;background:#ddd url(/static/images/button.png);cursor:pointer}
+.input_button_hide{background-position:-100px 0}
+#lg img{vertical-align:top;margin-bottom:3px}
+</style>
+</head>
+<body>
+
+<div id="m">
+<p id="lg"><img src="/static/images/logo.gif" height="129" width="270"></p>
+
+<div id="fm">
+    <form name="f">
+      <span class="text_wrapper"><input autocomplete="off" name="wd" maxlength="100" class="input_text" type="text" value={{text}}></span>
+      <span class="button_wrapper"><input type="button" value="百度一下" class="input_button" onmousedown="this.className='input_button input_button_hide'" onmouseout="this.className='input_button'" onclick="redirect();"></span>
+    </form>
+</div>
+</body>
+</html>
